@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Background Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="background">
+    <h1>Gradient Background Generator</h1>
+
+    <h2 for="gradient-type">Select Your Gradient Background Type.</h2>
+    <select name="gradient-type" id="gradient-type">
+        <option selected disabled hidden>Choose A Type</option>
+        <option value="linear-gradient">Linear Gradient</option>
+        <option value="radial-gradient">Radial Gradient</option>
+    </select>
+
+    <h2>Should This Gradient Pattern Repeat?</h2>
+    <label for="repeat-true">Yes</label>
+    <input type="radio" name="repeat" id="repeat-true">
+    <label for="repeat-false">No</label>
+    <input type="radio" name="repeat" id="repeat-false">
+
+    <h2>How Many Colors Would You Like To Use?</h2>
+    <select name="color-quantity" id="color-quantity">
+        <option selected disabled hidden>Choose A Number</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+
+    <h2>Choose Your Colors</h2>
+    <input class="colors" type="color" name="color1" id="color1">
+    <input class="colors" type="color" name="color2" id="color2">
+    <input class="colors" type="color" name="color3" id="color3">
+    <input class="colors" type="color" name="color4" id="color4">
+
+    <h3>Copy The Code Below Into Your CSS File To Use This Background.</h3>
+    <p id="code"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
