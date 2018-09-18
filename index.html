@@ -10,33 +10,63 @@
 <body id="background">
     <h1>Gradient Background Generator</h1>
 
-    <h2 for="gradient-type">Select Your Gradient Background Type.</h2>
-    <select name="gradient-type" id="gradient-type">
-        <option selected disabled hidden>Choose A Type</option>
-        <option value="linear-gradient">Linear Gradient</option>
-        <option value="radial-gradient">Radial Gradient</option>
-    </select>
+    <div id="gradient">
+        <h2 for="gradient-type">Select Your Gradient Background Type.</h2>
+        <div id="type">
+            <label class="type" for="gradient-type">Style: </label>
+            <select class="type" name="gradient-type" id="gradient-type">
+                <option selected disabled hidden>Choose Gradient Type</option>
+                <option value="linear-gradient">Linear Gradient</option>
+                <!-- <option value="repeating-linear-gradient">Repeating Linear Gradient</option> -->
+                <option value="radial-gradient">Radial Gradient</option>
+                <!-- <option value="repeating-radial-gradient">Repeating Radial Gradient</option> -->
+            </select>
+        </div>
+        <div id="direction">
+            <label class="direction" for="gradient-direction">Direction: </label>
+            <select class="direction" name="gradient-direction" id="gradient-direction">
+                <!-- <option selected disabled hidden>Choose A Direction</option> -->
+                <option value="to bottom">Default</option>
+                <option value="to top">to top</option>
+                <option value="to right">to right</option>
+                <option value="to left">to left</option>
+                <option value="to bottom right">to bottom right</option>
+                <option value="to bottom left">to bottom left</option>
+                <option value="to top right">to top right</option>
+                <option value="to top left">to top left</option>
+            </select>
+        </div>
+        <div id="shape">
+            <label class="shape" for="gradient-shape">Shape: </label>
+            <select class="shape" name="gradient-shape" id="gradient-shape">
+                <!-- <option selected disabled hidden>Choose A Shape</option> -->
+                <option value="default">Default</option>
+                <option value="circle">Circle</option>
+            </select>
+        </div>
+    </div>
 
-    <h2>Should This Gradient Pattern Repeat?</h2>
-    <label for="repeat-true">Yes</label>
-    <input type="radio" name="repeat" id="repeat-true">
-    <label for="repeat-false">No</label>
-    <input type="radio" name="repeat" id="repeat-false">
+    <div id="quantity">
+        <h2>How Many Colors Would You Like To Use?</h2>
+        <div>
+            <select name="color-quantity" id="color-quantity">
+                <!-- <option selected disabled hidden>Choose A Number</option> -->
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+    </div>
 
-    <h2>How Many Colors Would You Like To Use?</h2>
-    <select name="color-quantity" id="color-quantity">
-        <option selected disabled hidden>Choose A Number</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-    </select>
-
-    <h2>Choose Your Colors</h2>
-    <input class="colors" type="color" name="color1" id="color1">
-    <input class="colors" type="color" name="color2" id="color2">
-    <input class="colors" type="color" name="color3" id="color3">
-    <input class="colors" type="color" name="color4" id="color4">
+    <div id="colors">
+        <h2>Choose Your Colors</h2>
+        <div>
+            <input class="colors" type="color" name="color1" id="color1" value="#d7eefb">
+            <input class="colors" type="color" name="color2" id="color2" value="#33acee">
+            <input class="colors" type="color" name="color3" id="color3" value="#1f5ca0">
+            <input class="colors" type="color" name="color4" id="color4" value="#000000">
+        </div>
+    </div>
 
     <h3>Copy The Code Below Into Your CSS File To Use This Background.</h3>
     <p id="code"></p>
