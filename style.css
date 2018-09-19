@@ -1,14 +1,150 @@
-.colors {
-    visibility: hidden;
-}
+@import url('https://fonts.googleapis.com/css?family=Lato|Oxygen');
+
+/* Optimized for mobile phones/devices */
 
 body {
     text-align: center;
     height: 100vh;
-    background: #d7eefb;
+    color: rgba(0, 0, 0, .5);
+    margin: 0;
 }
 
-.direction, .shape {
+h1 {
+    font-family: 'Oxygen', sans-serif;
+    letter-spacing: .2em;
+    text-shadow: 1px 1px 2px #888888;
+    padding-top: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+div, footer {
+    font-family: 'Lato', sans-serif;
+}
+
+p, label, select, footer {
+    font-size: 12px;
+}
+
+p, label {
+    color: rgba(0, 0, 0, .6);
+}
+
+select {
+    width: 125px;
+    text-align-last: center;
+}
+
+p {
+    border: 1px solid rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    background: white;
+    min-height: 35px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+select, input, p {
+    box-shadow: 3px 3px 6px #888888;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.hidden {
     display: none;
 }
 
+.split-box {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: 
+        'left right';
+}
+
+.split-box-colors {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+        'left right';
+}
+
+
+.colors {
+    visibility: hidden;
+}
+
+
+.left {
+    grid-area: left;
+    justify-self: right;
+    padding-right: 5px;
+
+}
+
+.right {
+    grid-area: right;
+    justify-self: left;
+    padding-left: 5px;
+}
+
+.left-colors {
+    justify-self: right;
+    padding-right: 5px;
+    padding-bottom: 10px;
+}
+
+.right-colors {
+    justify-self: left;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+#css {
+    margin: 0px 15px;
+}
+
+#type {
+    margin-bottom: 10px;
+}
+
+/* For tablets in portrait orientation */
+
+@media only screen and (min-width: 600px){
+    h1 {
+        font-size: 32px;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    p {
+        width: 450px;
+        margin: auto;
+    }
+
+    .split-box {
+        grid-template-columns: 45% 55%;
+    }
+    
+}
+
+/* For tablets in landscape and computers */
+
+@media only screen and (min-width: 900px){
+    h1 {
+        font-size: 42px;
+        letter-spacing: .4em;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+}
